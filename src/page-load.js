@@ -71,35 +71,35 @@ function pageLoad() {
   let news = document.createElement("div");
   news.classList = "news";
 
-  //news element 1
-  let newsElement = document.createElement("div");
-  newsElement.classList = "newsElement";
-  let newsImg = document.createElement("img");
-  newsImg.src = GlutenFri;
-  newsImg.alt = "glutenfree choice";
-  newsElement.appendChild(newsImg);
-  news.appendChild(newsElement);
+  //news elements
+  let newsElements = [
+    {
+      src: GlutenFri,
+      alt: "glutenfree choice",
+    },
+    {
+      src: JobOffer,
+      alt: "job offer",
+    },
+    {
+      src: StudentOffer,
+      alt: "student offer",
+    },
+    {
+      src: NewsLetter,
+      alt: "news letter",
+    },
+  ];
 
-  //news element 2
-  newsElement.removeChild(newsImg);
-  newsImg.src = JobOffer;
-  newsImg.alt = "job offer";
-  newsElement.appendChild(newsImg);
-  news.appendChild(newsElement);
-
-  //news element 3
-  newsElement.removeChild(newsImg);
-  newsImg.src = StudentOffer;
-  newsImg.alt = "student offer";
-  newsElement.appendChild(newsImg);
-  news.appendChild(newsElement);
-
-  //news element 4
-  newsElement.removeChild(newsImg);
-  newsImg.src = NewsLetter;
-  newsImg.alt = "news letter";
-  newsElement.appendChild(newsImg);
-  news.appendChild(newsElement);
+  for (let i = 0; i < newsElements.length; i++) {
+    let newsElement = document.createElement("div");
+    newsElement.classList = "newsElement";
+    let newsImg = document.createElement("img");
+    newsImg.src = newsElements[i].src;
+    newsImg.alt = newsElements[i].alt;
+    newsElement.appendChild(newsImg);
+    news.appendChild(newsElement);
+  }
 
   main.appendChild(featured);
   main.appendChild(actionOption);
