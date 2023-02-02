@@ -7,6 +7,7 @@ module.exports = {
   entry: {
     index: "./src/index.js",
     print: "./src/page-load.js",
+    print2: "./src/menu-load.js",
   },
   devtool: "inline-source-map",
   plugins: [

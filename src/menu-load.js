@@ -19,7 +19,8 @@ function menuLoad() {
         "A vegitarians dreams come true. A tasty piece of youth.",
     },
   ];
-  for (let i = 0; i < menuItems; i++) {
+
+  for (let i = 0; i < menuItems.length; i++) {
     let menuItem = document.createElement("div");
     menuItem.classList = "menuItem";
 
@@ -39,7 +40,6 @@ function menuLoad() {
     menuItem.appendChild(itemDescription);
 
     menu.appendChild(menuItem);
-    console.log(menuItem);
   }
 
   return menu;

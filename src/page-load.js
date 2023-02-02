@@ -40,6 +40,7 @@ function pageLoad() {
       src: PizzaIcon,
       alt: "icon of pizza",
       pText: "Order pizza",
+      imgId: "menuCaller",
     },
     {
       src: CalendarIcon,
@@ -57,6 +58,9 @@ function pageLoad() {
     optionDivs[i] = document.createElement("div");
     optionDivs[i].classList = "option";
     let optionImg = document.createElement("img");
+    optionImg.id = options[i].imgId;
+    optionImg.classList = "optionImage";
+
     let text = document.createElement("p");
 
     optionImg.src = options[i].src;

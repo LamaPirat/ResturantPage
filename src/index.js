@@ -3,5 +3,12 @@ import menuLoad from "./menu-load.js";
 import "./style.css";
 
 // Main page
-//document.body.appendChild(pageLoad);
-document.body.appendChild(menuLoad);
+document.body.appendChild(pageLoad);
+
+// Menu page
+//document.body.appendChild(menuLoad);
+
+document.querySelector("#menuCaller").onclick = function () {
+  document.body.removeChild(document.querySelector(".content"));
+  document.body.appendChild(menuLoad);
+};
