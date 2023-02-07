@@ -5,6 +5,12 @@ function menuLoad() {
   let menu = document.createElement("div");
   menu.classList = "menu";
 
+  let homeButton = document.createElement("button");
+  homeButton.id = "homeButton";
+  homeButton.textContent = "Home";
+
+  menu.appendChild(homeButton);
+
   let menuItems = [
     {
       itemName: "Heavens Wheel",
